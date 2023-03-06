@@ -1,6 +1,13 @@
 body {
 	font-family: Arial, sans-serif;
 	background-color: #f2f2f2;
+	background-image: url(happy-indian-transformed.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#logo-img{
+	width: 20%;
+	display: inline-block;
 }
 
 .login-box {
@@ -10,6 +17,8 @@ body {
 	background-color: #fff;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #888888;
+	margin-right:45%;
+	margin-top:-2%;
 }
 
 h1 {
