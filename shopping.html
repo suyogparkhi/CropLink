@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Website</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.container{
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+	</style>
+	<script type="text/javascript">
+        
+		function getUrlParameter(name) {
+		    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+		    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+		    var results = regex.exec(location.search);
+		    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+		}
+
+		$(document).ready(function(){
+			var price = parseFloat(getUrlParameter('price'));
+			var quantity = parseInt(getUrlParameter('quantity'));
+			var subtotal = price * quantity;
+			var total = subtotal;
+
+			$('#quantity').attr('max', quantity);
+
+			$('#quantity').change(function(){
+				quantity = parseInt($(this).val());
+				subtotal = price * quantity;
+				total = subtotal;
+				$('#subtotal').text("$" + subtotal.toFixed(2));
+				$('#total').text("$" + total.toFixed(2));
+			});
+
+			$('#add-to-cart').click(function(){
+				// Add item to cart
+			});
+
+			$('#buy-now').click(function(){
+				// Proceed to checkout
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h2>Shopping Cart</h2>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Category</th>
+					<th>Item</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Subtotal</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td id="category"></td>
+					<td>Item 1</td>
+					<td id="price"></td>
+					<td><input type="number" id="quantity" value="1" min="1"></td>
+					<td id="subtotal"></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="row">
+			<div class="col-md-6">
+				<h4>Total: <span id="total"></span></h4>
+			</div
+>
+			<div class="col-md-6">
+				<button id="add-to-cart" class="btn btn-primary btn-lg pull-right">Add to Cart</button>
+				<button id="buy-now" class="btn btn-success btn-lg pull-right"><a href="payment.html">Buy Now</a></button>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		document.getElementById('category').innerHTML = getUrlParameter('category');
+		document.getElementById('price').innerHTML = "$" + getUrlParameter('price');
+		document.getElementById('subtotal').innerHTML = "$" + getUrlParameter('price');
+		document.getElementById('total').innerHTML = "$" + getUrlParameter('price');
+	</script>
+</body>
+</html>

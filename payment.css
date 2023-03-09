@@ -1,0 +1,41 @@
+#logo-img{
+	width: 20%;
+	display: inline-block;
+}
+#qr{
+    width: 40%;
+    display: inline-block;
+    
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  .container {
+    background-image: url(moneybag.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+  }
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .qr-code {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
