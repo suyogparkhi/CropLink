@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croplink</title>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/f3859851c5.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/f3859851c5.js" crossorigin="anonymous"></script>
+    <script>
+        function submit(){
+            var name = document.getElementById("name").value;
+			var pno = document.getElementById("phone_no").value;
+			
+			if (name == "" || pno == "") {
+				alert("Please enter your Name and Phone_no.");
+				return false;
+			// } else if (username != "croplink" || password != "blenders") {
+			// 	alert("Incorrect username or password. Please try again.");
+			// 	return false;
+			} else {
+                alert("Form submitted Successfully. We will reach out to you in 1-2 days.");
+                
+				return true;
+			}
+           
+        }
+    </script>
+</head>
+<body>
+    <div id="home-container">
+        <div class="logo-section">
+            <img src="logo.png" alt="" id="logo-landing">
 
+        </div>
+        <div id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-container">About</a></li>
+                <li><a href="#contact-container">Contacts</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+        <!-- <div id="home-quote"> -->
+        <p  class="p-home" id="p1">देश </p>
+        <p class="p-home" id="p2">के </p>
+        <p class="p-home" id="p3">साथ</p>
+    <!-- </div> -->
+    </div>
+    <div id="about-container">
+        <h2 class="h2">
+            About Us
+        </h2>
+<p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quaerat quibusdam explicabo autem, optio debitis laudantium ullam maxime reiciendis itaque officia molestiae, recusandae mollitia inventore est fugiat eius rem quidem perferendis obcaecati! Necessitatibus quasi ducimus fugiat distinctio sed provident mollitia, illo velit ad ea excepturi unde laudantium doloribus voluptatibus. Enim nobis debitis architecto ut, tempora quasi. Asperiores a suscipit quam, odio, laborum at unde ipsum dolorum natus odit vel nulla?
+</p>
+<div id="features-container">
+    <div class="feature-item f-1" >
+        <i class="fa-solid fa-farm"></i>
+        <img src="farmer.gif" alt="" class="item-1">
+        <h2 class="h2">Register Your Farm</h2>
+    </div>
+    <div class="feature-item">
+        <img src="social-media.gif" alt="" class="item-1">
+        <h2 class="h2">Connect To WholeSaler</h2>
+    </div>
+    <div class="feature-item">
+        <img src="truck.gif" alt="" class="item-1">
+        <h2 class="h2">Deliver To Wholesaler</h2>
+    </div>
+
+</div>
+    </div>
+    <div id="contact-container">
+        <h2 class="h2">Contact Us</h2>
+        <div class="contact-box">
+            <h1>Login</h1>
+    
+            <form onsubmit="return validateForm()">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter Name">
+    
+                <label for="phone_no">Phone No.</label>
+                <input type="text" id="phone_no" name="phone_no" placeholder="Enter Phone.No">
+
+                <label for="e-mail">E-mail</label>
+                <input type="email" id="password" name="e-mail" placeholder="abc@gamil.com">
+    
+                <button type="submit" onsubmit=" return submit()">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
