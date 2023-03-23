@@ -19,31 +19,37 @@
 		    var results = regex.exec(location.search);
 		    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 		}
+		
+		function calculateTotal() {
+    var price1 = parseFloat(getUrlParameter('price1'));
+    var quantity1 = parseInt(document.getElementById('quantity1').value);
+    var subtotal1 = price1 * quantity1;
 
-		$(document).ready(function(){
-			var price = parseFloat(getUrlParameter('price'));
-			var quantity = parseInt(getUrlParameter('quantity'));
-			var subtotal = price * quantity;
-			var total = subtotal;
+    var price2 = parseFloat(getUrlParameter('price2'));
+    var quantity2 = parseInt(document.getElementById('quantity2').value);
+    var subtotal2 = price2 * quantity2;
 
-			$('#quantity').attr('max', quantity);
+    var price3 = parseFloat(getUrlParameter('price3'));
+    var quantity3 = parseInt(document.getElementById('quantity3').value);
+    var subtotal3 = price3 * quantity3;
 
-			$('#quantity').change(function(){
-				quantity = parseInt($(this).val());
-				subtotal = price * quantity;
-				total = subtotal;
-				$('#subtotal').text("$" + subtotal.toFixed(2));
-				$('#total').text("$" + total.toFixed(2));
-			});
+    var total = subtotal1 + subtotal2 + subtotal3;
 
-			$('#add-to-cart').click(function(){
-				// Add item to cart
-			});
+    document.getElementById('subtotal1').innerHTML = "$" + subtotal1.toFixed(2);
+    document.getElementById('subtotal2').innerHTML = "$" + subtotal2.toFixed(2);
+    document.getElementById('subtotal3').innerHTML = "$" + subtotal3.toFixed(2);
+    document.getElementById('total').innerHTML = "$" + total.toFixed(2);
+}
 
-			$('#buy-now').click(function(){
-				// Proceed to checkout
-			});
-		});
+$(document).ready(function(){
+    calculateTotal();
+    
+    // Add event listeners to quantity input fields
+    document.getElementById('quantity1').addEventListener('input', calculateTotal);
+    document.getElementById('quantity2').addEventListener('input', calculateTotal);
+    document.getElementById('quantity3').addEventListener('input', calculateTotal);
+});
+
 	</script>
 </head>
 <body>
@@ -61,11 +67,25 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td id="category"></td>
+					<td id="category1"></td>
 					<td>Item 1</td>
-					<td id="price"></td>
-					<td><input type="number" id="quantity" value="1" min="1"></td>
-					<td id="subtotal"></td>
+					<td id="price1"></td>
+					<td><input type="number" id="quantity1" value="1" min="1"></td>
+					<td id="subtotal1"></td>
+				</tr>
+				<tr>
+					<td id="category2"></td>
+					<td>Item 2</td>
+					<td id="price2"></td>
+					<td><input type="number" id="quantity2" value="1" min="1"></td>
+					<td id="subtotal2"></td>
+				</tr>
+				<tr>
+					<td id="category3"></td>
+					<td>Item 3</td>
+					<td id="price3"></td>
+					<td><input type="number" id="quantity3" value="1" min="1"></td>
+					<td id="subtotal3"></td>
 				</tr>
 			</tbody>
 		</table>
@@ -82,10 +102,16 @@
 	</div>
 	
 	<script type="text/javascript">
-		document.getElementById('category').innerHTML = getUrlParameter('category');
-		document.getElementById('price').innerHTML = "$" + getUrlParameter('price');
-		document.getElementById('subtotal').innerHTML = "$" + getUrlParameter('price');
-		document.getElementById('total').innerHTML = "$" + getUrlParameter('price');
+		document.getElementById('category1').innerHTML = getUrlParameter('category1');
+        document.getElementById('price1').innerHTML = "$" + getUrlParameter('price1');
+        document.getElementById('category2').innerHTML = getUrlParameter('category2');
+        document.getElementById('price2').innerHTML = "$" + getUrlParameter('price2');
+        document.getElementById('category3').innerHTML = getUrlParameter('category3');
+        document.getElementById('price3').innerHTML = "$" + getUrlParameter('price3');
+
+        calculateTotal(); // Call the calculateTotal function after setting the values
+
 	</script>
 </body>
 </html>
+
