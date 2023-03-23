@@ -39,10 +39,10 @@
 
     var total = subtotal1 + subtotal2 + subtotal3;
 
-    document.getElementById('subtotal1').innerHTML = "$" + subtotal1.toFixed(2);
-    document.getElementById('subtotal2').innerHTML = "$" + subtotal2.toFixed(2);
-    document.getElementById('subtotal3').innerHTML = "$" + subtotal3.toFixed(2);
-    document.getElementById('total').innerHTML = "$" + total.toFixed(2);
+    document.getElementById('subtotal1').innerHTML = "₹" + subtotal1.toFixed(2);
+    document.getElementById('subtotal2').innerHTML = "₹" + subtotal2.toFixed(2);
+    document.getElementById('subtotal3').innerHTML = "₹" + subtotal3.toFixed(2);
+    document.getElementById('total').innerHTML = "₹" + total.toFixed(2);
 }
 
 $(document).ready(function(){
@@ -108,11 +108,11 @@ $(document).ready(function(){
 	
 	<script type="text/javascript">
 		document.getElementById('category1').innerHTML = getUrlParameter('category1');
-        document.getElementById('price1').innerHTML = "$" + getUrlParameter('price1');
+        document.getElementById('price1').innerHTML = "₹" + getUrlParameter('price1');
         document.getElementById('category2').innerHTML = getUrlParameter('category2');
-        document.getElementById('price2').innerHTML = "$" + getUrlParameter('price2');
+        document.getElementById('price2').innerHTML = "₹" + getUrlParameter('price2');
         document.getElementById('category3').innerHTML = getUrlParameter('category3');
-        document.getElementById('price3').innerHTML = "$" + getUrlParameter('price3');
+        document.getElementById('price3').innerHTML = "₹" + getUrlParameter('price3');
 
         calculateTotal(); // Call the calculateTotal function after setting the values
 
