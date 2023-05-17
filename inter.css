@@ -1,0 +1,165 @@
+img{
+    display: inline-block;
+    
+}
+#logo-section{
+	display:inline-block;
+    
+}
+#logo-landing{
+	width: 40%;
+	display: inline-block;
+    margin-left:2%;
+}
+body{
+    font-family: Arial, sans-serif;
+    margin:0%;
+}
+/* home container */
+#home-container{
+    display: flex;
+    
+}
+#logo-section{
+	display:inline-block;
+    
+}
+#logo-landing{
+	width: 40%;
+	display: inline-block;
+    margin-left:2%;
+}
+#navbar{
+	display: inline-block;
+}
+#navbar ul{
+	display:flex;
+	list-style: none;
+    /* margin-left:70%; */
+    margin-top: 12%;
+}#navbar li a {
+text-decoration: none;
+font-size: 1.4em;
+color: black;
+}
+#navbar li a:hover{
+/* background-color:rgb(23, 202, 23); */
+cursor: pointer;
+/* border-radius: 10px; */
+padding: 2%;
+color:rgb(23, 202, 23);
+text-decoration: overline;
+}
+#navbar li{
+    margin: 5% 5%;
+}
+#home-tagline{
+    display:inline-block;
+    margin-top:25%;
+    margin-right: 45%;
+    /* font-size: 3em; */
+}
+#p1{
+margin-top:21%;
+margin-left:-55%;
+
+}#p2{
+margin-top:25%;
+margin-right:2%;
+margin-left:2%;
+}#p3{
+margin-top:27%;
+}
+.p-home{
+    margin-top:29%;
+    font-size:5rem;
+    /* margin-right:40%; */
+    color:white;
+    text-align: left;
+    
+}
+/* About-us Conatiner */
+ .h2{
+    color:rgb(23, 202, 23);
+    text-align: center;
+    font-size: 2.3em;
+    text-decoration: underline rgb(223, 41, 41);
+}#p4{
+    font-size:1.8em;
+    text-align: center;
+    padding:3% 10%;
+}
+#feature-container{
+    display: flex;
+    margin-left:20%;
+}
+.feature-item{
+display:inline-block;
+width:200px;
+margin-left: 4%;
+margin-right:3%;
+}.featur-item h2{
+    margin-top:0%;
+}.f-1{
+    margin-left: 20%;
+}
+.item-1{
+    text-align: center;
+    height:150px;
+    margin-left: 14%;
+}
+/* contacts-section */
+#contact-container{
+    margin-top:7%;
+}
+.contact-box {
+	max-width: 400px;
+	margin: auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px #888888;
+	margin-right:45%;
+	margin-top:-2%;
+    margin:auto;
+}form {
+	display: flex;
+	flex-direction: column;
+    margin: auto;
+}label {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+input {
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0px 0px 5px #888888;
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0px 0px 5px #888888;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+h2{
+    
+    color:rgb(23, 202, 23);
+    text-align: center;
+    font-size: 2.3em;
+    text-decoration: underline rgb(223, 41, 41);
+}
+.card{
+    margin: 15px;
+    background-color: lightgreen;
+}
